@@ -2,6 +2,7 @@ name: WIP AWS Access Request
 description: To request access to AWS
 title: Access for [individual]
 labels: ['external-request', 'operations', 'ops-access-request']
+assignees: ericboehs
 body:
   - type: markdown
     attributes:
@@ -24,8 +25,6 @@ body:
         - Vilay Senthep
         - Eunice Garcia
         - Other
-    validations:
-      required: true
   - type: dropdown
     id: vendor
     attributes:
@@ -40,32 +39,24 @@ body:
         - Liberty IT -  Michael G. Lovejoy
         - Accenture Federal Services - Alexa Elliot
         - Other
-    validations:
-      required: true
   - type: input
     id: requestor-name
     attributes:
       label: Your Name
       description: Please provide your name
       placeholder: e.g. Jane Doe
-    validations:
-      required: true
   - type: input
     id: email
     attributes:
       label: Your Email
       description: Please provide your work email
       placeholder: e.g. jane.doe@company.com
-    validations:
-      required: true
   - type: input
     id: team-name
     attributes:
       label: Your Team, Role, and Company
       description: Please provide the name of your team, your role on that team, and the name of the company you work for
       placeholder: e.g. Platform Security, Backend Engineer, Ad Hoc
-    validations:
-      required: true
   - type: textarea
     id: aws-access
     attributes:
@@ -78,10 +69,10 @@ body:
       label: Access Expiration
       description: The requested access will be revoked at the start of this date. Enter a date (and time if applicable) or 'ongoing' for non-expiring access.
       placeholder: timestamp
-    validations:
-      required: true
-  - type: markdown
+  - type: textarea
+    id: do-not-edit
     attributes:
+      label: DO NOT EDIT BELOW
       value: |
         ---
         For SOCKS access, open a [SOCKS Access Request](https://github.com/department-of-veterans-affairs/va.gov-team/issues/new?assignees=&labels=external-request%2Coperations%2Cops-access-request&template=socks-access-request.yml&title=Access+for+%5Bindividual%5D).
